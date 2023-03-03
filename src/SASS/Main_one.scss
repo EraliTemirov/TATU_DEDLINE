@@ -1,0 +1,48 @@
+
+      @media only screen and (max-width:430px) {
+        .cards{
+            h2{
+                font-size: 1.2rem;
+            }
+           
+            margin: 0 auto;
+            text-align: center;
+            background-color: red;
+        }
+      }
+     
+    
+
+
+
+.card{
+    width: 22%;
+    border: 1px solid wheat;
+    border-radius: 12px;
+    img{
+        border: 1px solid white;
+        border-radius: 12px;
+    }
+    button{
+        margin-top: 12px;
+    }
+}
+
+ @media only screen and (max-width:570px) {
+        .card{
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: blue;
+            
+          img{
+            width: 70%;
+            margin-left: 2rem;
+        }
+        button{
+            width: 70%;
+            margin-left: 2rem;
+          }
+        }
+      }

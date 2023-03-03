@@ -1,0 +1,48 @@
+
+.Header_Two{
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  
+//   height: 5rem;
+    .library_Logo{
+        width: 100px;
+    }
+}
+
+
+.bacground{
+
+  @media only screen and (max-width:950px) {
+    .button_log_up{
+      display: block;
+    }
+
+      .login{
+        display:block;
+      }
+      .signup{
+        display: block;
+      }
+
+    
+  }
+  
+      @media only screen and (max-width:770px) {
+        .login{
+          display: none;
+        }
+        .signup{
+          display: none;
+        }
+      }
+    }
+      @media only screen and (max-width:430px) {
+        .library_Logo{
+          display: none;
+        }
+        .form_input{
+          padding-top: 5px;
+        }
+      }
+    
