@@ -5,8 +5,11 @@ import "../SASS/Regester2.scss"
 const Regester2 = () => {
   return (
     <div>
-      <Link to="/">Home</Link><br />
-      <Link to="Regester">Regester</Link>
+       <div style={{position:'absolute'}}>
+         <Link to="/">Home</Link>
+         <br />
+         <Link to="/Regester">Regester</Link>
+       </div>
       <div className="container-fluit main">
         <div className="row container-fluit">
           <div className="col-6 main_one align-self-center">

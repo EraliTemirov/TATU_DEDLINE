@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Tatu from "../../assets/TD.png"
 import "../../SASS/Header.scss";
 
@@ -14,7 +13,6 @@ const Header_one = () => {
           <i className="fa-regular fa-heart fs-5"></i>
         </button>
       </div>
-      <Link to="/Regester2">Regester2</Link>
     </div>
   );
 }

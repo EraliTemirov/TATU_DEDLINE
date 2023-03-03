@@ -6,11 +6,11 @@ import Main from '../Components/Main';
 const Home = () => {
   return (
     <div>
-      <Link to="/Regester">Regester</Link>
-      <Header/>
-      <Main/>
+      
+      <Header />
+      <Main />
     </div>
-  )
+  );
 }
 
 export default Home

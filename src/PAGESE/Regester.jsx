@@ -42,9 +42,13 @@ const Regester = () => {
 
   return (
     <div className="bg-font">
-      <Header_one/>
-      <Link to="/">Home</Link>
-      <form  className="container w-50">
+      <Header_one />
+      <div style={{ position: "absolute" }}>
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/Regester2">Regester2</Link>
+      </div>
+      <form className="container w-50">
         <h1 className="text-secondary">Sign up</h1>
         <input
           className="d-block form-control mt-5 "
@@ -54,8 +58,8 @@ const Regester = () => {
           id="name"
           required
           min={3}
-        //   values={values.name}
-        //   onChange={handelInputChange}
+          //   values={values.name}
+          //   onChange={handelInputChange}
         />
         <input
           type="email"
@@ -65,8 +69,8 @@ const Regester = () => {
           id="email"
           required
           min={12}
-        //   values={values.email}
-        //   onChange={handelInputChange}
+          //   values={values.email}
+          //   onChange={handelInputChange}
         />
         <p className="text-light mt-1">
           This site uses Gravatar so if you want a profile image, use a Gravatar
@@ -80,8 +84,8 @@ const Regester = () => {
           id="password"
           required
           min={4}
-        //   values={values.password}
-        //   onChange={handelInputChange}
+          //   values={values.password}
+          //   onChange={handelInputChange}
         />
         <input
           type="password"
@@ -91,8 +95,8 @@ const Regester = () => {
           id="confirmpassword"
           required
           min={4}
-        //   values={values.confirmpassword}
-        //   onChange={handelInputChange}
+          //   values={values.confirmpassword}
+          //   onChange={handelInputChange}
         />
         <div className="mt-5 ">
           <button className="btn btn-info w-25 ">Register</button>
