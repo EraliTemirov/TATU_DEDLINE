@@ -2,8 +2,12 @@
   background-color: #f0f0f0;
   background-color: rgb(29, 45, 91);
   /* padding: 10px; */
-  height: 99vh;
+  height: 90vh;
   width: 99vw;
+}
+.Login{
+  scroll-behavior: smooth;
+
 }
 
 // .main_one {
@@ -68,3 +72,6 @@
   font-size: 1rem;
   color: rgb(29, 45, 91);
 }
+// .header_one{
+//   width: 99%;
+// }

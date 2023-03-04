@@ -3,6 +3,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Header_one from "../Components/Header_components/Header_one";
 
+
 const Regester = () => {
 //   const [values, setValues] = useState({
 //     name: "",
@@ -48,8 +49,8 @@ const Regester = () => {
         <br />
         <Link to="/Regester2">Regester2</Link>
       </div>
-      <form className="container w-50">
-        <h1 className="text-secondary">Sign up</h1>
+      <form className="container regester_width">
+        <h1 className="text-secondary mt-4">Sign up</h1>
         <input
           className="d-block form-control mt-5 "
           type="text"
@@ -72,7 +73,7 @@ const Regester = () => {
           //   values={values.email}
           //   onChange={handelInputChange}
         />
-        <p className="text-light mt-1">
+        <p className="text-light mt-1 thisemail">
           This site uses Gravatar so if you want a profile image, use a Gravatar
           email
         </p>
@@ -99,10 +100,10 @@ const Regester = () => {
           //   onChange={handelInputChange}
         />
         <div className="mt-5 ">
-          <button className="btn btn-info w-25 ">Register</button>
+          <button className="btn btn-info w-50 ">Register</button>
           <div className="d-flex">
             <p className="paragraph">Already have an account?</p>
-            <Link to="/siginin" className="signup-signin text-decoration-none">
+            <Link to="/Login" className="signup-signin text-decoration-none">
               Sign in
             </Link>
           </div>

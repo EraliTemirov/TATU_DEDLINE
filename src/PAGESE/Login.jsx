@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Header_one from '../Components/Header_components/Header_one';
 import "../SASS/Regester2.scss"
 
 const Regester2 = () => {
   return (
-    <div>
+    <div  className='Login'>
+        {/* <div className="header_one">
+          <Header_one/>
+        </div> */}
        <div style={{position:'absolute'}}>
          <Link to="/">Home</Link>
          <br />

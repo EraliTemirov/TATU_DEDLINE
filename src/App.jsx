@@ -2,7 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './PAGESE/Home';
 import Regester from "./PAGESE/Regester"
-import Regester2 from './PAGESE/Regester2';
+import Login from './PAGESE/Login';
+import Product from './PAGESE/Product';
+import Not_found from './PAGESE/Not_found';
 
 function App() {
 
@@ -10,7 +12,9 @@ function App() {
    <Routes>
     <Route path='/' element={ <Home/>} />
     <Route path='/Regester' element={ <Regester/>} />
-    <Route path='/Regester2' element={ <Regester2/>} />
+    <Route path='/Login' element={ <Login/>} />
+    <Route path='/Product' element={ <Product/>} />
+    <Route path='/*' element={ <Not_found/>} />
    </Routes>
   )
 }

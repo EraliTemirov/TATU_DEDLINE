@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logos from "../../assets/Logos.png"
 import "../../SASS/Header_two.scss"
 
@@ -22,8 +23,8 @@ const Header_two = () => {
           </div>
         </form>
         <div className='w-25 d-flex justify-content-around pb-2 button_log_up'>
-          <button className="btn btn-light login">Log in</button>
-          <button className="btn btn-primary signup"> Sign up</button>
+          <Link to={"/Login"} className="btn btn-light login">Log in</Link>
+          <Link to={"Regester"}  className="btn btn-primary signup"> Sign up</Link >
           <i className="fa-solid fa-bars fs-3 Hause"></i>
         </div>
       </div>
