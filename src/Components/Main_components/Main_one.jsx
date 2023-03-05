@@ -19,16 +19,16 @@ const Main_one = () => {
 
   return (
     <div className="container">
-      <div className="container cards ">
+      <div className="container cards text-center ">
         <h2>Welcom to Open dedline</h2>
-        <div className="d-flex card-map gap-2  pt-4">
+        <div className="container d-flex justify-content-center card-map gap-2  pt-4">
           {Array.isArray(datacourse.data) &&
             datacourse.data?.map((el) =>
             
           <div className="card p-2  ">
             <img src={el.image} alt="rasm" />
             <span className='text-center fs-1'>{el.name}</span>
-            <Link to={"/Product"} className="btn btn-info mt-4">
+            <Link to={"/Product"} className="btn btn-primary mt-4">
               Reading
             </Link>
           </div>
