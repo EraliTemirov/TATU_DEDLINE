@@ -19,9 +19,9 @@ const Main_one = () => {
 
   return (
     <div className="container">
-      <div className="container cards text-center ">
+      <div className=" cards text-center ">
         <h2>Welcom to Open dedline</h2>
-        <div className="container d-flex justify-content-center card-map gap-2  pt-4">
+        <div className=" d-flex justify-content-center card-map gap-2  pt-4">
           {Array.isArray(datacourse.data) &&
             datacourse.data?.map((el) =>
             
