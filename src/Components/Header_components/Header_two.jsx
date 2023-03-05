@@ -16,8 +16,7 @@ const Header_two = () => {
             <input
               type="text"
               className="form-control"
-              placeholder="Username"
-              aria-label="Username"
+              placeholder="Search"
               aria-describedby="basic-addon1"
             />
           </div>
@@ -25,7 +24,7 @@ const Header_two = () => {
         <div className='w-25 d-flex justify-content-around pb-2 button_log_up'>
           <Link to={"/Login"} className="btn btn-light login">Log in</Link>
           <Link to={"Regester"}  className="btn btn-primary signup"> Sign up</Link >
-          <i className="fa-solid fa-bars fs-3 Hause"></i>
+          {/* <i className="fa-solid fa-bars fs-3 Hause"></i> */}
         </div>
       </div>
     </div>

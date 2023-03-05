@@ -1,19 +1,62 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import Header_one from '../Components/Header_components/Header_one';
+import axios from 'axios';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 import "../SASS/Regester2.scss"
 
 const Regester2 = () => {
+ const navigate = useNavigate();
+
+
+const [values, setValues] = useState({
+  email: "",
+  password: "",
+});
+
+
+
+
+  async function handleLogen(e) {
+    e.preventDefault();
+
+    try {
+      let {
+        data: { token, status, role },
+      } = await axios.post(
+        "https://azizjon003.jprq.live/api/v1/auth/login",
+        values
+      );
+    console.log(role);
+      localStorage.setItem("token", token);
+      navigate("/");
+       toast("status", { type: "info" });
+    } catch (error) {
+      console.log("Error");
+      console.log(error)
+      toast("Error", { type: "error" });
+    }
+  }
+
+
+
+
+
+ function handelInputChange(e) {
+   setValues((oldValues) => ({
+     ...oldValues,
+     [e.target.name]: e.target.value,
+   }));
+ }
   return (
-    <div  className='Login'>
-        {/* <div className="header_one">
+    <div className="Login">
+      {/* <div className="header_one">
           <Header_one/>
         </div> */}
-       <div style={{position:'absolute'}}>
-         <Link to="/">Home</Link>
-         <br />
-         <Link to="/Regester">Regester</Link>
-       </div>
+      <div style={{ position: "absolute" }}>
+        <Link to="/">Home</Link>
+        <br />
+        <Link to="/Regester">Regester</Link>
+      </div>
       <div className="container-fluit main">
         <div className="row container-fluit">
           <div className="col-6 main_one align-self-center">
@@ -42,15 +85,20 @@ const Regester2 = () => {
                 LEARNING MANAGEMENT SYSTEM
               </div>
               <div className="col-12 item">
-                <form className="form-group">
+                <form onSubmit={handleLogen} className="form-group">
                   <label htmlFor="login_input" className="label_login">
                     Login
                   </label>
                   <input
                     type="email"
+                    name="email"
                     className="form-control"
                     id="login_input input_control"
-                    placeholder="Loginni kiriting"
+                    placeholder="emailni kiriting"
+                    required
+                    min={10}
+                    values={values.email}
+                    onChange={handelInputChange}
                   />
 
                   <label htmlFor="password_input" className="label_login mt-3">
@@ -60,7 +108,12 @@ const Regester2 = () => {
                     type="password"
                     className="form-control input_control"
                     id="password_input"
+                    name="password"
                     placeholder="Parolni kiriting"
+                    required
+                    min={5}
+                    values={values.password}
+                    onChange={handelInputChange}
                   />
 
                   <button type="submit" className="btn_login mt-3 pt-2 pb-2">

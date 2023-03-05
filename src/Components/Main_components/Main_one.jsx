@@ -1,34 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import rasm from "../../assets/images.png"
 import "../../SASS/Main_one.scss"
 
 const Main_one = () => {
 
+ 
+ const [datacourse, setDatacourse] = useState([]);
+
+ useEffect(() => {
+   fetch(`https://azizjon003.jprq.live/api/v1/cource`)
+     .then((res) => res.json())
+     .then((json) => setDatacourse(json));
+   setDatacourse(datacourse);
+ }, []);
+ console.log(datacourse);
 
 
 
   return (
-    <div>
+    <div className="container">
       <div className="container cards ">
-        <h2>Welcom to Open lebrary</h2>
-        <div className="row   pt-4">
-          <div className="card col-md-4 p-4 col-lg-3 col-sm-6  ">
-            <img src={rasm} alt="rasm" />
-            <Link to={"/Product"} className="btn btn-info mt-4">Reading</Link>
+        <h2>Welcom to Open dedline</h2>
+        <div className="d-flex card-map gap-2  pt-4">
+          {Array.isArray(datacourse.data) &&
+            datacourse.data?.map((el) =>
+            
+          <div className="card p-2  ">
+            <img src={el.image} alt="rasm" />
+            <span className='text-center fs-1'>{el.name}</span>
+            <Link to={"/Product"} className="btn btn-info mt-4">
+              Reading
+            </Link>
           </div>
-          <div className="card col-md-4 p-4 col-lg-3 col-sm-6 ">
-            <img src={rasm} alt="rasm" />
-            <button className="btn btn-info">Reading</button>
-          </div>
-          <div className="card  col-md-4 p-4 col-lg-3 col-sm-6 ">
-            <img src={rasm} alt="rasm" />
-            <button className="btn btn-info">Reading</button>
-          </div>
-          <div className="card  col-md-4 p-4 col-lg-3 col-sm-6 ">
-            <img src={rasm} alt="rasm" />
-            <button className="btn btn-info">Reading</button>
-          </div>
+            )}
         </div>
       </div>
     </div>
