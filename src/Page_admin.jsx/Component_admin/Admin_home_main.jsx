@@ -14,15 +14,15 @@ const Admin_home_main = () => {
         </div>
         <div className="card col-md-4 p-4 col-lg-3 col-sm-6 ">
           <img src={rasm} alt="rasm" />
-          <button className="btn btn-info">Reading</button>
+          <Link to={"*"} className="btn btn-info">Reading</Link>
         </div>
         <div className="card  col-md-4 p-4 col-lg-3 col-sm-6 ">
           <img src={rasm} alt="rasm" />
-          <button className="btn btn-info">Reading</button>
+          <Link to={"*"} className="btn btn-info">Reading</Link>
         </div>
         <div className="card  col-md-4 p-4 col-lg-3 col-sm-6 ">
           <img src={rasm} alt="rasm" />
-          <button className="btn btn-info">Reading</button>
+          <Link to={"*"} className="btn btn-info">Reading</Link>
         </div>
       </div>
     </div>

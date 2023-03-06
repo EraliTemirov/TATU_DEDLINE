@@ -10,7 +10,7 @@ const Admin_home = () => {
     <div>
       <Header_one />
       <Header_two/>
-      <div className='d-flex'>
+      <div className='d-flex container'>
         <Admin_home_main/>
         <Admin_home_saidbar/>
       </div>
