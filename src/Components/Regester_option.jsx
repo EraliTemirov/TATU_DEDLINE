@@ -1,23 +1,16 @@
 import { useEffect, useState } from "react";
-
-
 const Regester_option = () => {
     
 
  const [data, setData] =useState([])
-
         useEffect(() => {
           fetch(`https://azizjon003.jprq.live/api/v1/faculties`)
             .then((res) => res.json())
             .then((json) => setData(json));
             setData(data);
          }, []);
-      
     console.log(data)
-
-     
-
-       
+    
   return (
     <div>
       <select name="" id="" className="form-control mt-3">
