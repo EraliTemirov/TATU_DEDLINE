@@ -1,21 +1,19 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
 import "../SASS/Regester2.scss"
+import Cookies from "universal-cookie";
 
 const Regester2 = () => {
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
-
-const [values, setValues] = useState({
-  email: "",
-  password: "",
-});
-
-
-
-
+  
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+  
   async function handleLogen(e) {
     e.preventDefault();
 
@@ -26,27 +24,46 @@ const [values, setValues] = useState({
         "https://azizjon003.jprq.live/api/v1/auth/login",
         values
       );
-    console.log(role);
+      console.log(role);
       localStorage.setItem("token", token);
       navigate("/");
-       toast("status", { type: "info" });
+
+      toast("status", { type: "info" });
+      const cookies = new Cookies();
+      cookies.set("jwt", token, { path: "/" });
+      console.log(cookies.get(token));
+
     } catch (error) {
       console.log("Error");
-      console.log(error)
+      
       toast("Error", { type: "error" });
     }
   }
 
+  function handelInputChange(e) {
+    setValues((oldValues) => ({
+      ...oldValues,
+      [e.target.name]: e.target.value,
+    }));
+  }
 
+  // async function handleLogen(e) {
+  //   e.preventDefault();
 
+  //   try {
+  //     let {
+  //       data: { data, status },
+  //     } = await axios.post("https://azizjon003.jprq.live/api/v1/upload");
+  //     console.log(data);
+  //     console.log(status);
+    
+  //   } catch (error) {
+  //     console.log(status);
 
+     
+  //   }
+  // }
 
- function handelInputChange(e) {
-   setValues((oldValues) => ({
-     ...oldValues,
-     [e.target.name]: e.target.value,
-   }));
- }
   return (
     <div className="Login">
       {/* <div className="header_one">

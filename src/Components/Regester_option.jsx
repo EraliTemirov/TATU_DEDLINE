@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-const Regester_option = () => {
-    
+const Regester_option = () => {    
 
- const [data, setData] =useState([])
+  
+  const [data, setData] =useState([])
         useEffect(() => {
           fetch(`https://azizjon003.jprq.live/api/v1/faculties`)
             .then((res) => res.json())

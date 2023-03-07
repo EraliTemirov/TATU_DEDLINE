@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Main_one from './Main_components/Main_one'
-
+import Main_one from './Main_components/Main_one';
+   
 const Main = () => {
+
+   
+
+
   return (
-    <div>
+    <div className="container">
       <div style={{ position: "absolute" }}>
-        <Link to="/">
-          Home
-        </Link>
+        <Link to="/">Home</Link>
         <br />
         <Link to="/Regester">Regester</Link>
       </div>
@@ -16,5 +18,4 @@ const Main = () => {
     </div>
   );
 }
-
-export default Main
+export default Main;

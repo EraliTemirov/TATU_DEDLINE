@@ -26,6 +26,7 @@ const Header_two = () => {
           <Link to={"Regester"}  className="btn btn-primary signup"> Sign up</Link >
           {/* <i className="fa-solid fa-bars fs-3 Hause"></i> */}
         </div>
+        
       </div>
     </div>
   );

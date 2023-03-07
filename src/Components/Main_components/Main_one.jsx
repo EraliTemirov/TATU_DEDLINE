@@ -22,10 +22,10 @@ const Main_one = () => {
       <div className=" cards text-center ">
         <h2>Welcom to Open dedline</h2>
         <div className=" d-flex justify-content-center card-map gap-2  pt-4">
-          {Array.isArray(datacourse.data) &&
+          {Array.isArray(datacourse.data ) &&
             datacourse.data?.map((el) =>
             
-          <div className="card p-2  ">
+          <div className="card p-2 ">
             <img src={el.image} alt="rasm" />
             <span className='text-center fs-1'>{el.name}</span>
             <Link to={"/Product"} className="btn btn-primary mt-4">
