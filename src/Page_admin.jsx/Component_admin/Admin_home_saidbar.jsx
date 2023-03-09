@@ -1,10 +1,16 @@
 import React from "react";
 import "./Saidbar.css";
+import "../SASS_admin/Saidbar_admin.scss";
+
+
+const 
+
 
 function Admin_home_saidbar() {
   return (
+
     <div className="sidebar">
-      <h2>Menyu</h2>
+      <h2><button className="btn btn-light">Menu</button></h2>
       <ul>
         <li>Asosiy sahifa</li>
         <li>Xizmatlar</li>
