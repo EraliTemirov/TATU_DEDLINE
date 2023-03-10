@@ -2,7 +2,9 @@ body{
     background-color: rgb(184, 208, 208);
 }
 
-
+.regester_file_form{
+    flex-wrap: wrap;
+}
 .regester_width{
         
         width: 50%;

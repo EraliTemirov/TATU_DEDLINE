@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 import Cookies from 'universal-cookie';
+import Header_one from '../Components/Header_components/Header_one';
 
 const File_regester = () => {
 const myData = localStorage.getItem("data");
@@ -10,11 +11,11 @@ const myData = localStorage.getItem("data");
     name: "",
     fan: "",
     course: "",
-    
+    variant:" ",
     file:myData
 });
 
-console.log(myData);
+
 
 const cookies = new Cookies();
   const bearer_token = cookies.get("jwt");
@@ -87,21 +88,34 @@ const cookies = new Cookies();
 
   return (
     <div>
-      <form onSubmit={handleRegister}>
+      <Header_one/>
+      <div className='container d-flex justify-content-center'>
+      <form onSubmit={handleRegister} className="w-75 mt-5 d-flex regester_file_form justify-content-end">
         <input
           type="text"
           id="name"
           name="name"
           placeholder="name"
           required
+          className='form-control mt-3'
           values={values.name}
+          onChange={handelInputChange}
+        />
+        <input
+          type="number"
+          id="variant"
+          name="variant"
+          placeholder="variant"
+          required
+          className='form-control mt-2'
+          values={values.variant}
           onChange={handelInputChange}
         />
 
         <select
           name="course"
           id="course"
-          className="form-control"
+          className="form-control mt-2"
           required
           values={values.course}
           onChange={handelInputChange}
@@ -116,7 +130,7 @@ const cookies = new Cookies();
         <select
           name="fan"
           id="fan"
-          className="form-control"
+          className="form-control mt-2"
           required
           values={values.fan}
           onChange={handelInputChange}
@@ -129,8 +143,9 @@ const cookies = new Cookies();
             ))}
         </select>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className='btn btn-primary mt-3 '>Submit</button>
       </form>
+    </div>
     </div>
   );
 }

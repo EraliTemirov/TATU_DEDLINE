@@ -1,33 +1,25 @@
 .bacground_img{
-   background-image: url(https://static.tuit.uz/crop/3/7/850__80_3737477937.jpg);
-   width: 100%;
 
+    .upload_file{
+      width: 50%;
+      margin-top: 3rem;
+      border:1px solid red;
 
-    .input_file{
-
-        .image{
-            width: 70%;
-        }
-        input{
-            width: 30%;
-        }
+      background-color: white;
+      padding: 1rem;
+      .input_file{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        .input{
         
-        @media only screen and (max-width:950px) {
-            .image{
-              display: none;
-            }
-        
-            
-          }
-    
-        width: 80%;
-        margin-top:2rem;
-        border: 1px solid inherit;
-        border-radius: 8px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px;
-        text-align: center;
-    
+          color: white;
+          background-color: white;
+        }
+      }
+      button_input{
+        width: 100px;
     }
-}
+      
+    }
+    
+  }
