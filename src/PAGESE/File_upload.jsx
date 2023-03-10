@@ -1,5 +1,8 @@
 import { toast } from "react-toastify";
 import Cookies from "universal-cookie";
+import Header_one from "../Components/Header_components/Header_one";
+import "../SASS/Upload_file.scss"
+import upload from "../assets/Upload.png"
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -38,14 +41,17 @@ const handleSubmit = (event) => {
 
 const File_upload = () => {
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="fileInput ">
-        Choose a file:
-        <input type="file" id="fileInput" />
+   <div className="bacground_img">
+    <Header_one/>
+     <form onSubmit={handleSubmit} className="container">
+      <label htmlFor="fileInput "className="input_file" >
+        <img src={upload} alt="rasm" className="image" />
+        <input type="file"/>
       </label>
       <br />
-      <button type="submit">Submit</button>
+      <button type="submit" className="btn btn-primary">Submit</button>
     </form>
+   </div>
   );
 };
 

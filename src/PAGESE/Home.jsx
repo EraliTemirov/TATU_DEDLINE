@@ -9,6 +9,7 @@ const Home = () => {
       
       <Header />
       <Main />
+      <Link to="/upload">Upload</Link>
     </div>
   );
 }

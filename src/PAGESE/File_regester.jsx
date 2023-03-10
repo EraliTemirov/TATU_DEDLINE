@@ -10,6 +10,7 @@ const myData = localStorage.getItem("data");
     name: "",
     fan: "",
     course: "",
+    
     file:myData
 });
 
