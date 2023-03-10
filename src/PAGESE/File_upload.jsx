@@ -46,7 +46,7 @@ const File_upload = () => {
      <form onSubmit={handleSubmit} className="container">
       <label htmlFor="fileInput "className="input_file" >
         <img src={upload} alt="rasm" className="image" />
-        <input type="file"/>
+        <input type="file" id="fileInput" />
       </label>
       <br />
       <button type="submit" className="btn btn-primary">Submit</button>
