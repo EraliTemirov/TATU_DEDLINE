@@ -17,6 +17,13 @@ const myData = localStorage.getItem("data");
 
 
 
+
+
+
+
+
+
+
 const cookies = new Cookies();
   const bearer_token = cookies.get("jwt");
   var bearer = "Bearer " + bearer_token;

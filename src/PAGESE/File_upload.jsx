@@ -2,18 +2,16 @@ import { toast } from "react-toastify";
 import Cookies from "universal-cookie";
 import Header_one from "../Components/Header_components/Header_one";
 import "../SASS/Upload_file.scss"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const handleSubmit = (event) => {
-
-
+  
+  event.preventDefault();
 
   
 
 
-
-  event.preventDefault();
-  const fileInput = document.querySelector("#fileInput");
   const formData = new FormData();
 
   
@@ -22,6 +20,7 @@ const handleSubmit = (event) => {
   const cookies = new Cookies();
   const bearer_token = cookies.get("jwt");
   var bearer = "Bearer " + bearer_token;
+
 
 
   fetch("https://azizjon003.jprq.live/api/v1/upload", {
@@ -34,22 +33,42 @@ const handleSubmit = (event) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      
-    localStorage.setItem("data", data.data);
+      localStorage.setItem("data", data.data);
+     
+  
+     
+   
     
-        toast.success("Muvaffaqiyatli amal bajarildi!");
-        
-    })
-    .catch((error) => {
-       console.log(error);
+    
+    
+  })
+  .catch((error) => {
+    alert("Bajarilmadi")
       
     });
+
 };
 
 
 
 
 const File_upload = () => {
+
+
+  const [count, setCount]= useState("")
+  const navigate =useNavigate();  
+   
+  function handlesubmet() {
+    
+  }
+
+ useEffect(()=>{
+  if(localStorage.getItem("data")){
+    navigate("/fileregester");
+
+  }
+ }, [count])
+
   return (
    <div className="bacground_img">
     <Header_one/>
@@ -59,11 +78,9 @@ const File_upload = () => {
         <input type="file"  id="fileInput"  className="input" />
       </label>
       <br />
-      <button  className="btn btn-primary button_input">Fayl yuklash</button>
+      <button  onClick={handlesubmet} className="btn btn-primary button_input">Fayl yuklash</button>
     </form>
    </div>
   );
 };
-
-// ReactDOM.render(<File_upload />, document.getElementById("root"));
 export default File_upload;
