@@ -20,7 +20,7 @@ const Main_one = () => {
   return (
     <div className="container">
       <div className=" cards text-center ">
-        <h2>O'zgardimi Aziz</h2>
+        <h2>Welcom to Open dedline</h2>
         <div className=" d-flex justify-content-center card-map gap-2  pt-4">
           {Array.isArray(datacourse.data ) &&
             datacourse.data?.map((el) =>
